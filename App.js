@@ -1,54 +1,20 @@
 import React from 'react';
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Image, Button, Alert} from 'react-native';
- 
+import { createAppContainer } from 'react-navigation';
+import { createDrawerNavigator} from 'react-navigation-drawer';
 
 
+import Home from './src/pages/Home';
+import Contato from './src/pages/Contato';
 
- 
-
-
-
-export default function App() {
-
-
-  return (
-    <View style={styles.container}>
-     
-    <Image style={styles.imagem}source={require('./assets/logo.png')}/>
-
-    <Button 
-    buttonStyle={styles.button}
-    title="Iniciar"
-    color='#FFB800'
-   
-    onPress={() => Alert.alert('Tudo pronto?')}
-  
-  
- 
-    />
-
-  
-    </View>
+const Routes = createAppContainer(
+  createDrawerNavigator({
+    Contato, Home
+  }, {
+    initialRouteName: 'Home'
+  })
 );
-}
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#002EAD',
-    justifyContent: 'center',
-    alignItems: 'center',
-    
-  },
+export default Routes;
 
-  imagem: {
-    width: 150,
-    height: 150
-  },
-
+ 
   
-
-});
-
-
