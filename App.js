@@ -2,7 +2,7 @@ import React from 'react';
 // import { createAppContainer } from 'react-navigation';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import { NavigationContainer } from '@react-navigation/native';
-import { ScrollView, StyleSheet} from 'react-native';
+import { ScrollView} from 'react-native';
 import Header from './src/components/Header'
 import PomodoroTimer from './src/components/PomodoroTimer'
 
@@ -17,9 +17,9 @@ const Drawer = createDrawerNavigator();
 export default function App() {
  
   return (
-    <ScrollView style={styles.container}>
+    <ScrollView>
         <Header/>
-        <PomodoroTimer />
+        <PomodoroTimer/>
       </ScrollView>
     );
   }

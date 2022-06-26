@@ -4,14 +4,14 @@ import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
 class TimerButtons extends React.Component {
 	state = {};
 
-	//renders pause, play and reset buttons
+
 	render() {
 		if(this.props.running === true)
 		{
 			return (
 				<View style={styles.container}>
 					<TouchableOpacity style={styles.buttonStyle} onPress={this.props.pause}>
-						<Text style={styles.buttonText}>Pause</Text>
+						<Text style={styles.buttonText}>Pausa</Text>
 					</TouchableOpacity>
 					<TouchableOpacity style={styles.buttonStyle} onPress={this.props.reset}>
 						<Text style={styles.buttonText}>Reset</Text>
@@ -24,7 +24,7 @@ class TimerButtons extends React.Component {
 			return(
 				<View  style={styles.container}>
 					<TouchableOpacity style={styles.buttonStyle} onPress={this.props.play}>
-						<Text style={styles.buttonText}>Play</Text>
+						<Text style={styles.buttonText}>Começar</Text>
 					</TouchableOpacity>
 				</View>
 			)
@@ -39,18 +39,21 @@ const styles=StyleSheet.create({
 		marginLeft: 20, 
 		justifyContent: 'space-evenly',
 		marginBottom: 20
+		
 	},
 	buttonStyle:{
 		alignItems: "center",
-		backgroundColor: "#C2362B",
-	    padding: 30,
+		backgroundColor: "#F4B000",
+	    padding: 10,
 	    flexDirection: "row" ,
-	    borderRadius: 80,
+	    borderRadius: 8,
 	}, 
 	 buttonText: {
 	    color: "white",
 	    fontSize: 25,
-	    fontWeight: "300",
+	    fontWeight: "30",
+
+
   	}
 })
 

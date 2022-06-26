@@ -5,7 +5,7 @@ class Header extends React.Component {
 	render() {
 		return(
 			<View style={styles.headerContainer}>
-				<Text style={styles.textStyle}> Pomodoro Timer </Text>
+				<Text style={styles.textStyle}> Bem-vindo(a) ao time!</Text>
 			</View>
 		)
 	}
@@ -13,23 +13,19 @@ class Header extends React.Component {
 
 const styles = StyleSheet.create({
 	headerContainer: {
-    backgroundColor: "#C2362B",
-    height: 90,
+    backgroundColor: "#F4B000",
+    height: 80,
     justifyContent: "center",
     alignItems: "center",
-    shadowColor: "#000",
-    shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 1,
-    elevation: 5,
-    position: "relative"
+    
+    
   },
   textStyle: {
-    color: "white",
+    color: "black",
     fontSize: 20,
-    fontWeight: "600",
     letterSpacing: 1.5,
     fontFamily: Platform.OS == "android" ? "notoserif" : "system",
-    marginTop: 50
+    marginTop: 25
   }
 })
 

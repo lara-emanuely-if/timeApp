@@ -93,7 +93,7 @@ export default Timer;
 
 const styles = StyleSheet.create({
   textStyle: {
-    color: "#C2362B",
+    color: "#F4B000",
     fontSize: 25,
     fontWeight: "500",
     letterSpacing: 1.5,

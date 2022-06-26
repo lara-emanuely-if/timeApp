@@ -6,7 +6,7 @@ export default function Home({ navigation }) {
   return (
     <>
       <View style={styles.container}>
-        <Image style={styles.imagem} />
+     
       </View>
       <View>
         <Button

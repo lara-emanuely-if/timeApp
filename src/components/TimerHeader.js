@@ -8,18 +8,18 @@ class TimerHeader extends React.Component {
 		if(this.props.intervalType === "Working")
 		{
 			if(this.props.running === true) {
-				return "Keep working hard!"
+				return "Continue trabalhando duro!"
 			}
 			else {
-				return "Time to work!"
+				return "Hora de trabalhar!"
 			}	
 		}
 		else {
 			if(this.props.running === true) {
-				return "It's break time! Enjoy"
+				return "É hora do intervalo! "
 			}
 			else {
-				return "Relax :)"
+				return "Relaxe um tiquin :)"
 			}	
 		}
 
@@ -36,11 +36,10 @@ class TimerHeader extends React.Component {
 const styles = StyleSheet.create({
   textStyle: {
     fontSize: 25,
-    fontWeight: "500",
-    letterSpacing: 1.5,
-    fontFamily: Platform.OS == "android" ? "notoserif" : "system",
+    letterSpacing: 1,
     marginTop: 40,
-    padding: 20
+    padding: 20,
+
   }
 });
 
