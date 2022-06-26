@@ -1,5 +1,6 @@
 import React from 'react';
-import { View, Image, Button, Alert, StyleSheet } from 'react-native';
+import {View, Image, Button, Alert, StyleSheet } from 'react-native';
+
 
 export default function Home({ navigation }) {
   return (
@@ -13,6 +14,11 @@ export default function Home({ navigation }) {
           title="Iniciar"
           color='#FFB800'
           onPress={() => Alert.alert('Tudo pronto?')} />
+   
+   
+  
+ 
+
       </View>
     </>
   );
