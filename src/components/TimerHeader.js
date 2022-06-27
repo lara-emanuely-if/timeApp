@@ -1,5 +1,5 @@
 import React from 'react';
-import { Platform, StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text} from 'react-native';
 
 class TimerHeader extends React.Component {
 
@@ -8,15 +8,16 @@ class TimerHeader extends React.Component {
 		if(this.props.intervalType === "Working")
 		{
 			if(this.props.running === true) {
-				return "Continue trabalhando duro!"
+				return "Não desista hein? Você é capaz!"
 			}
 			else {
-				return "Hora de trabalhar!"
+				return "Preparado(a)? Se sim, já clica ai em começar :)"
+				
 			}	
 		}
 		else {
 			if(this.props.running === true) {
-				return "É hora do intervalo! "
+				return "Intervalo... Relaxa aí abençoado!!"
 			}
 			else {
 				return "Relaxe um tiquin :)"
@@ -35,10 +36,12 @@ class TimerHeader extends React.Component {
 
 const styles = StyleSheet.create({
   textStyle: {
-    fontSize: 25,
+    fontSize: 20,
     letterSpacing: 1,
-    marginTop: 40,
+    marginTop: 20,
     padding: 20,
+	
+
 
   }
 });

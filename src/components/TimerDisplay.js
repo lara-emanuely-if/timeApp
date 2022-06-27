@@ -3,7 +3,7 @@ import { StyleSheet, Text, View } from 'react-native';
 
 class TimerDisplay extends React.Component {
 
-	// display currently running timer
+	//exibe o timer em execução
 	render() {
 		return (
 			<View style={styles.container}>
@@ -15,21 +15,20 @@ class TimerDisplay extends React.Component {
 		)
 	}
 }
-
+<Image source={'./Header/logo.png'} />
 export default TimerDisplay;
 
 const styles = StyleSheet.create({
 	container: {
-		marginTop: "10%",
-	    marginBottom: "10%",
-	    marginLeft: "7%",
-	    marginRight: "7%",
+		marginTop: "50%",
+	    marginBottom: "5%",
+	    marginLeft: "10%",
+	    marginRight: "10%",
 	    padding: "15%",
 	    borderColor: "white",
-	    borderRadius: 800,
+	    borderRadius: 80,
 	    borderWidth: 9,
 		alignItems: 'center',
-	
 		backgroundColor: "#F4B000"
 	},
 	textStyle: {

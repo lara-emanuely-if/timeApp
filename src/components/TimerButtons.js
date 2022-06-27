@@ -38,7 +38,7 @@ const styles=StyleSheet.create({
 		flexDirection: "row" ,
 		marginLeft: 20, 
 		justifyContent: 'space-evenly',
-		marginBottom: 20
+		marginBottom: 30
 		
 	},
 	buttonStyle:{
@@ -51,8 +51,7 @@ const styles=StyleSheet.create({
 	 buttonText: {
 	    color: "white",
 	    fontSize: 25,
-	    fontWeight: "30",
-
+	 
 
   	}
 })

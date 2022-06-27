@@ -78,46 +78,24 @@ class PomodoroTimer extends React.Component {
 	render() {
 		let time= this.handleTime()
 		return (
-			<View>
-			<View style={styles.row}>
-				<View style={styles.inputWrap}>
-					<Text style={styles.textStyle}></Text>
-					
-			</View>
-				<View style={styles.inputWrap}>
-					<Text style={styles.textStyle}></Text>
-					
-			</View>
-			</View>
+			
 			
 				<Timer
 					intervalType={this.state.intervalType}
 					Oncomplete={this.handleTimerCompleted}
 					period={time}
 				/>
-			</View>
+		
 			)
 	}
 }
 export default PomodoroTimer;
 
 const styles = StyleSheet.create({
-   row: {
-    flex: 1,
-    flexDirection: "row",
-
-  },
-  inputWrap: {
-    flex: 1,
-
-    marginBottom: 1
-	
-  },
+  	
   textStyle: {
     fontSize: 20,
-    fontWeight: "50",
     letterSpacing: 1.5,
-    fontFamily: Platform.OS == "android" ? "notoserif" : "system",
     marginTop: 30,
     padding: 15,
 
