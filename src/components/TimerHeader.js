@@ -11,7 +11,7 @@ class TimerHeader extends React.Component {
 				return "Não desista hein? Você é capaz!"
 			}
 			else {
-				return "Preparado(a)? Se sim, já clica ai em começar :)"
+				return "Preparado(a)? Clica ai em começar :)"
 				
 			}	
 		}
@@ -36,11 +36,11 @@ class TimerHeader extends React.Component {
 
 const styles = StyleSheet.create({
   textStyle: {
-    fontSize: 20,
+    fontSize: 17,
     letterSpacing: 1,
     marginTop: 20,
     padding: 20,
-	
+	fontWeight: 'bold',
 
 
   }

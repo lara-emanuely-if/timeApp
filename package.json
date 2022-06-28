@@ -46,6 +46,11 @@
     "type": "git",
     "url": "index.js"
   },
+  
+  "moduleNameMapper": {
+    "\\.(jpg|jpeg|png|svg)$": "<rootDir>/images/dummy-image.js"
+  
+  },
   "keywords": [
     "test"
   ],

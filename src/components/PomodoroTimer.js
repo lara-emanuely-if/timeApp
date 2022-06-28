@@ -13,23 +13,24 @@ class PomodoroTimer extends React.Component {
 		}
 	}
 
-	// handles completion of timer
+	//conclusão do timer
+
 	handleTimerCompleted = () => {
 		if(this.state.intervalType === "Working")
 		{
 			this.setState({
-				intervalType: "Tempo"
+				intervalType: "Break"
 			})
 		}
 		else
 		{
 			this.setState({
-				intervalType: "Pausa"
+				intervalType: "Working"
 			})	
 		}
 	}
 
-	// gets triggered on change of worktimer text
+	// é acionado na alteração do texto do timer
 	handleWorkTime = (text) =>
 	{
 		if(text >= 0)
@@ -39,31 +40,31 @@ class PomodoroTimer extends React.Component {
 			})
 		}
 		else{
-			alert("Time invalid. Setting value to default. Please enter valid time")
+			alert("Defina um valor válido")
 			this.setState({
 				workTime: 25
 			})
 		}
 	}
 
-	// gets triggered on change of breaktimer text
+	// é acionado na alteração do texto do breaktimer
 	handleBreakTime = (text) =>{
 		if(text >= 0)
 		{
 			this.setState({
-				
+				breakTime:  text
 			})
 		}
 		else
 		{
-			alert("Time invalid. Setting value to default. Please enter valid time")
+			alert("Defina um valor válido")
 			this.setState({
-				pausa: 5
+				breakTime: 5
 			})
 		}
 	}
 
-	// called to set the timer's time
+	// chamado para definir a hora do temporizador
 	handleTime = () => {
 		if(this.state.intervalType === "Working")
 		{
@@ -78,26 +79,51 @@ class PomodoroTimer extends React.Component {
 	render() {
 		let time= this.handleTime()
 		return (
-			
-			
+			<View>
+			<View style={styles.row}>
+				<View style={styles.inputWrap}>
+						<Text style={styles.textStyle}>Foco</Text>
+						<TextInput  style={styles.textStyle}  keyboardType={"numeric"} defaultValue={''+this.state.workTime}  onChangeText={this.handleWorkTime} />
+			</View>
+					
+				<View style={styles.inputWrap}>
+						<Text style={styles.textStyle}>Descanso</Text>
+						<TextInput  style={styles.textStyle}  keyboardType={"numeric"} defaultValue={''+this.state.breakTime}onChangeText={this.handleBreakTime} />
+			</View>
+
+				</View>
 				<Timer
 					intervalType={this.state.intervalType}
 					Oncomplete={this.handleTimerCompleted}
 					period={time}
 				/>
-		
+			</View>
 			)
 	}
 }
 export default PomodoroTimer;
 
 const styles = StyleSheet.create({
-  	
+   row: {
+    flex: 1,
+    flexDirection: "row",
+	
+  },
+  inputWrap: {
+    flex: 1,
+    marginBottom: 10,
+
+  },
   textStyle: {
     fontSize: 20,
     letterSpacing: 1.5,
-    marginTop: 30,
-    padding: 15,
+    marginTop: 10,
+    padding: 10,
+	fontWeight: 'bold',
+	
+
+
+	
 
   }
 });

@@ -15,7 +15,7 @@ class Timer extends React.Component {
 		}
 	}
 
-	// gets called when a stream of new props arrive from parent component
+	// é chamado quando um fluxo de novas props chega do componente pai
 	componentWillReceiveProps(nextProps) {
     	this.setState({ running: false, time: nextProps.period * 60 });
 		if(this.state.running === true && this.state.time == 0)
@@ -44,7 +44,7 @@ class Timer extends React.Component {
 		)
 	}
 
-	// Invoked immediately after update occurs
+	// Chamado imediatamente após a atualização ocorrer
 	componentDidUpdate() {
 		if(this.state.running === true && this.state.time == 0)
 		{
@@ -59,7 +59,7 @@ class Timer extends React.Component {
 		}
 	}
 
-	// gets triggered when Play button is pressed
+	// é acionado quando o botão iniciar é pressionado
  	handlePlay = () => {
 		this.setState({
 			running: true
@@ -71,7 +71,8 @@ class Timer extends React.Component {
 		}, 1000)
 	}
 
-	//gets triggered when Pause button is pressed
+//é acionado quando o botão Pause é pressionado
+
 	handlePause = () => {
 		clearInterval(this.timerId)
 		this.setState({
@@ -79,7 +80,7 @@ class Timer extends React.Component {
 		})
 	}
 
-	// gets triggered when Reset button is pressed
+	// é acionado quando o botão Reset é pressionado
 	handleReset = () => {	
 		clearInterval(this.timerId)
 		this.setState({
@@ -96,8 +97,7 @@ const styles = StyleSheet.create({
     color: "#C2362B",
     fontSize: 25,
     letterSpacing: 1.5,
+
   
-    marginTop: 40,
-    padding: 20
   }
 });
